@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OGC - Services</title>
+  <title>Case Market - Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -12,10 +12,14 @@
       padding: 0;
       font-family: 'Montserrat', sans-serif;
       background-color: #1f1f1f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
 
     .top-bar {
-      background-color: #252525;
+      background-color: #222;
       color: #fff;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       transition: background-color 0.3s ease;
@@ -28,9 +32,8 @@
 
     .container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       padding: 10px;
       max-width: 1200px;
       margin: 0 auto;
@@ -42,7 +45,7 @@
       transition: color 0.3s ease;
       color: #8b10dd;
       font-family: 'Montserrat', sans-serif;
-      padding-left: 10px;
+      padding-left: 10px; /* Add some left padding to the logo */
     }
 
     .menu {
@@ -79,6 +82,7 @@
       transform: scaleX(1);
     }
 
+    /* Splash Window styles */
     .menu-item-container {
       position: relative;
     }
@@ -88,7 +92,7 @@
       top: 100%;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #393939;
+      background-color: #222;
       padding: 10px;
       color: #fff;
       font-size: 14px;
@@ -96,7 +100,7 @@
       opacity: 0;
       transition: opacity 0.3s ease, top 0.3s ease;
       visibility: hidden;
-      width: 400px;
+      width: 400px; /* Adjust the width to make the splash box longer horizontally */
     }
 
     .menu-item-container:hover .splash {
@@ -105,22 +109,49 @@
       visibility: visible;
     }
 
-    .goods-card,
-    .card-image,
-    .card-content,
-    .card-title,
-    .card-description,
-    .availability {
-      display: none;
+    /* Centered Square styles */
+    .centered-square {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
-    @media (max-width: 600px) {
-      .goods-card {
-        width: 100%;
-        margin-top: 20px;
-      }
+    .centered-square h1 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-top: 20px;
+      font-family: 'Montserrat', sans-serif;
     }
 
+    .centered-square p {
+      font-size: 18px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 15px;
+    }
+
+    /* Order button styles */
+    .order-button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #8b10dd;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .order-button:hover {
+      background-color: #8b10dd;
+    }
+    
+    /* Footer styles */
     footer {
       text-align: center;
       padding: 10px 0;
@@ -137,43 +168,21 @@
       font-size: 14px;
     }
 
-    .Casetwo {
+    footer a {
+      color: #8b10dd;
+      text-decoration: none;
+    }
+    .Casetwo{
       color: #8b10dd;
       font-weight: bold;
     }
-
-    .textcontact {
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 700;
-    }
-
-    .about-text {
-      font-size: 15px;
-      font-weight: bold;
-      text-align: left;
-      margin-top: 50px;
-      color: #fff;
-    }
-
-    .description-text {
-      font-size: 20px;
-      color: #fff;
-      text-align: left;
-      margin: 20px 0;
+    .OrderNowText {
+      font-family: monospace;
+      color: #333;
+      text-underline-position: above;
       font-weight: bold;
     }
 
-    .bold {
-      font-weight: bold;
-    }
-
-    .bigger {
-      font-size: 30px;
-    }
-    .simgadiv {
-        height: 100px;
-        width: 100px;
-    }
     .username1 {
         color: #8b10dd;
       }
@@ -183,7 +192,7 @@
 <body>
   <div class="top-bar">
     <div class="container">
-      <div class="logo">Oddblox's Graphic Services</div>
+      <div class="logo">OddBlox's Graphic Services</div>
       <nav>
         <ul class="menu">
           <li><a href="index.html" class="menu-item">Home</a></li>
@@ -206,52 +215,13 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="about-text"><span class="bold bigger">About OddBlox's Graphics Services (OGS)</span></div>
-    <div class="description-text">
-      <span class="description-text">Welcome to OddBlox's Graphics Services, affectionately known as "OGS." We are a passionate
-        community of graphic design enthusiasts who share a deep love for creativity, artistry, and the world of visual
-        communication. Whether you're looking for a epic website or just looking for icons, logos, banners, and
-        thumbnails, OGS is here to help your ideas come to life!</span>
-    </div>
-
-    <div class="about-text">
-      <span class="description-text1">Who We Are</span><br>
-      At OGS, we are a collective of talented graphic designers, artists, and design enthusiasts who believe that the
-      power of visuals can transform ideas into unforgettable experiences. We are a diverse and inclusive community,
-      brought together by our shared passion for graphic design in all its forms.
-    </div>
-
-    <div class="about-text">
-      <span class="description-text">What We Do</span><br>
-      Our primary goal at OGS is to make the best possible graphic design of all sorts! We offer a wide range of
-      services and resources, including: "<span class="bold">Logos</span>," "<span class="bold">Banners</span>," "<span
-        class="bold">Profile pictures</span>," "<span class="bold">icons</span>," and "<span
-        class="bold">thumbnails</span>"
-    </div>
-
-    <div class="about-text" style="text-align: left;">
-      <span class="description-text">Our Commitment</span><br>
-      At OGS, we believe in fostering a positive and respectful community where every member's voice is valued. We are
-      dedicated to providing a safe and welcoming environment where members are able to see their ideas come to life.
-    </div>
-
-    <div class="about-text" style="text-align: left;">
-      <span class="description-text">Join Us</span><br>
-      Whether you're here just to hang out or buy graphic design, OGS is the place for you. We welcome everyone with
-      open arms and look forward to sharing this creative journey with you.
-    </div>
-
-    
-
-    <div class="simgadiv">
-
-    </div>
-
-    <!-- Rest of your goods-cards and other content here -->
-
+  <div class="centered-square">
+    <h1 class="OrderCas">Welcome to OddBlox Digital services</h1>
+    <p>Browse our collection of exciting services and place your order now!</p>
+    <button class="order-button"><a href="Order.html" class="OrderNowText">Order Now</a></button>
   </div>
 
+  <!-- Footer -->
   <footer>
     <p><span class="Casetwo">© 2023 Case Market.</span> All rights reserved. | Designed by MakuhaPerduha</a></p>
   </footer>
